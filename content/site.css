@@ -101,3 +101,135 @@ body.dark {
 .button:active {
 	background-color: hsl(199, 100%, 42%);
 }
+
+
+/***********************
+***  Ticket styles  ***
+***********************/
+.ticket-wrapper {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 300px;
+	z-index: 1;
+}
+
+.ticket {
+	position: relative;
+	left: -300px;
+	bottom: -90px;
+
+	display: table;
+	width: 300px;
+	height: auto;
+	min-height: 100px;
+	margin-top: 10px;
+	-webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 0;
+}
+
+.ticket-move { left: 30px; }
+
+.ticket-leftSide,
+.ticket-rightSide {
+	display: table-cell;
+	padding: 11px 12px;
+	background-color: #FFE1B3;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.ticket-leftSide { width: 100px; }
+.ticket-rightSide { width: 200px; }
+.ticket-rightSide h4 { margin-bottom: 8px; }
+
+/* Ticket corners */
+.ticket-corners {
+ 	position:relative;
+ 	overflow:hidden;
+}
+
+.ticket-arcTop,
+.ticket-arcBottom {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.ticket-cornersBorder .ticket-arcTop { border-right: 1px dotted #fff; }
+.dark .ticket-cornersBorder .ticket-arcTop { border-color: #17181B; }
+
+.dark .ticket-arcTop:before,
+.dark .ticket-arcTop:after,
+.dark .ticket-arcBottom:before,
+.dark .ticket-arcBottom:after {
+	background-color: #17181B;
+}
+
+.ticket-arcTop:before,
+.ticket-arcTop:after,
+.ticket-arcBottom:before,
+.ticket-arcBottom:after {
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.ticket-arcTop:before {
+	top: -7px;
+	left: -7px;
+}
+
+.ticket-arcTop:after {
+	top: -7px;
+	right: -7px;
+}
+
+.ticket-arcBottom:before {
+	bottom: -7px;
+	left: -7px;
+}
+
+.ticket-arcBottom:after {
+	bottom: -7px;
+	right: -7px;
+}
+/* end of Ticket corners */
+
+/***** end of Ticket styles *****/
+
+
+
+/***********************
+***  Helper classes  ***
+***********************/
+
+/* Font styles */
+.fs-11 { font-size: 11px; }
+.fs-17 { font-size: 17px; }
+
+
+.fw-normal { font-weight: normal; }
+
+
+.f-color-black { color: black; }
+.f-color-795548 { color: #795548; }
+.f-color-4C4C4C { color: #4C4C4C; }
+/* end of Font styles */
+
+
+.txt-upper { text-transform: uppercase;  }
+.txt-center { text-align: center; }
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+
+
+.no-margin { margin: 0; }
+
+/*****  end of Helper classes  *****/
