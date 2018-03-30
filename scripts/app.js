@@ -18,9 +18,9 @@ $(function(){
 			var ticketCopy = ticket.clone(); // create new ticket
 
 			// if text length is less than minimum then run with a default template text
-			if(checkMinLength(text)) {
+			//if(checkMinLength(text)) {
 				ticketCopy.find('.ticket-rightSide p').text(text);
-			}
+			//}
 
 			// insert ticket to DOM and animate
 			var a = ticket.before(ticketCopy.delay(1).queue(function() {
